@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
-import { Button, FormControl, Typography } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Typography,
+} from "@mui/material";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import Select from "@mui/material/Select";
+import { Box } from "@mui/system";
 
 const Form = () => {
   const [input, setInput] = useState({
     firstName: "",
     email: "",
     password: "",
+    subscribe: false,
+    age: "",
   });
 
   const handleChange = (e) => {
@@ -20,6 +30,10 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(input);
+  };
+  const handleAgeChange = (e) => {
+    e.preventDefault();
+    setInput({ ...input, age: e.target.value });
   };
 
   return (
@@ -52,6 +66,23 @@ const Form = () => {
           value={input.email}
           onChange={handleChange}
         />
+        <Box sx={{ minWidth: 120 }}>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={input.age}
+              label="Age"
+              onChange={handleAgeChange}
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
+
         <FormGroup>
           <FormControlLabel
             control={
