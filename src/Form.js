@@ -39,6 +39,8 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
+        <FormControl>
+
         <TextField
           id="firstName"
           name="firstName"
@@ -47,7 +49,7 @@ const Form = () => {
           sx={{ margin: 3 }}
           value={input.firstName}
           onChange={handleChange}
-        />
+          />
         <TextField
           id="password"
           name="password"
@@ -67,7 +69,7 @@ const Form = () => {
           onChange={handleChange}
         />
         <Box sx={{ minWidth: 120 }}>
-          <FormControl fullWidth>
+          <FormControl fullWidth >
             <InputLabel id="demo-simple-select-label">Age</InputLabel>
             <Select
               labelId="demo-simple-select-label"
@@ -86,16 +88,17 @@ const Form = () => {
         <FormGroup>
           <FormControlLabel
             control={
-              <Checkbox
+                <Checkbox
                 onChange={() =>
                   setInput((e) => ({ ...input, subscribe: !input.subscribe }))
                 }
-              />
+                />
             }
             label="subscribe"
           />
         </FormGroup>
         <Button type="submit">Submit</Button>
+            </FormControl>
       </form>
     </div>
   );
