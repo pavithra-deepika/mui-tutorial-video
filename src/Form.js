@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
-import { Button, Typography } from "@mui/material";
+import { Button, FormControl, Typography } from "@mui/material";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 
 const Form = () => {
   const [input, setInput] = useState({
@@ -49,6 +52,18 @@ const Form = () => {
           value={input.email}
           onChange={handleChange}
         />
+        <FormGroup>
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={() =>
+                  setInput((e) => ({ ...input, subscribe: !input.subscribe }))
+                }
+              />
+            }
+            label="subscribe"
+          />
+        </FormGroup>
         <Button type="submit">Submit</Button>
       </form>
     </div>
