@@ -5,7 +5,6 @@ import {
   FormControl,
   InputLabel,
   MenuItem,
-  Typography,
 } from "@mui/material";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -39,7 +38,6 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <FormControl>
 
         <TextField
           id="firstName"
@@ -98,7 +96,6 @@ const Form = () => {
           />
         </FormGroup>
         <Button type="submit">Submit</Button>
-            </FormControl>
       </form>
     </div>
   );
