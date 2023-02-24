@@ -9,10 +9,17 @@ import Modal from "./Modal";
 import Lists from "./List";
 import NestedLists from "./NestedLists";
 import Ac from "./Ac";
+import Part from "./Part";
+import ImageLists from "./ImageList";
+import Lays from "./Lays";
+
 function App() {
   return (
     <div>
       <Ac />
+      <Part />
+      <ImageLists />
+      <Lays />
     </div>
       // <AutoCom />
     
