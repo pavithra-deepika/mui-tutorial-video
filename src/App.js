@@ -5,6 +5,9 @@ import Menu from "./Menu";
 import Test from "./Test";
 import Card from "./Card";
 import Dialogs from "./Dialog";
+import Modal from "./Modal";
+import Lists from "./List";
+import NestedLists from "./NestedLists";
 function App() {
   return (
     <div className="App">
@@ -29,7 +32,13 @@ function App() {
         <h1>card</h1>
         <Card />
       </div>
+      <br></br>
       <Dialogs />
+      <br></br>
+      <Modal />
+      <br></br>
+      <Lists />
+      {/* <NestedLists /> */}
     </div>
   );
 }
