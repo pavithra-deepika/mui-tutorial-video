@@ -12,6 +12,8 @@ import Ac from "./Ac";
 import Part from "./Part";
 import ImageLists from "./ImageList";
 import Lays from "./Lays";
+import Colour from "./colour";
+import Design from "./Styles";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Part />
       <ImageLists />
       <Lays />
+      {/* <Colour /> */}
+<Design />
     </div>
       // <AutoCom />
     

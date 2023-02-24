@@ -1,6 +1,6 @@
-import { AppBar,Button,Toolbar, Typography } from '@mui/material'
+import { AppBar,Button,IconButton,Toolbar, Typography } from '@mui/material'
 import React from 'react'
-
+import PersonIcon from '@mui/icons-material/Person';
 export default function App_Toolbar() {
   return (
     <div>
@@ -10,6 +10,9 @@ export default function App_Toolbar() {
           <Typography variant="h6" color="inherit" component="div" >
             Photos
           </Typography>
+          <IconButton>
+          Person
+          </IconButton>
           <Button color="warning" size="large" sx={{ margin:3 }}  variant="text">login</Button>
         </Toolbar>
       </AppBar>
